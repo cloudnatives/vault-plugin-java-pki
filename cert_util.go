@@ -1680,7 +1680,7 @@ func certBundleToKeystoreChain(cb *certutil.CertBundle) ([]keystore.Certificate,
 		}
 	}
 	if len(cb.IssuingCA) > 0 {
-		certificates = append(certificates, keystore.Certificate{
+		trustedCertificates = append(certificates, keystore.Certificate{
 			Type:    "X.509",
 			Content: []byte(cb.IssuingCA),
 		})
